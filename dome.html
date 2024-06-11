@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let set;
+            let start = function() {
+                set = setInterval(function() {
+                    console.log("vivek baraiya");
+                }, 2000);
+            }
+            let stop = function() {
+                clearInterval(set);
+            }
+
+            document.querySelector('#start').addEventListener('click', start);
+            document.querySelector('#stop').addEventListener('click', stop);
+        });
+    </script>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <p id="demo"></p>
+</body>
+</html>

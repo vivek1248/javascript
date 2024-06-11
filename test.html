@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <p id="demo"></p>
+
+    <script>
+        let intervalId;
+
+        const print = function() {
+          console.log("vivek baraiya");
+        }
+
+        document.querySelector('#start').addEventListener('click', function() {
+            // Ensure any previous interval is cleared before starting a new one
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+            intervalId = setInterval(print, 2000);
+        });
+
+        document.querySelector('#stop').addEventListener('click', function() {
+            clearInterval(intervalId);
+        });
+    </script>
+</body>
+</html>
